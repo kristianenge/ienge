@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <div>
         <h1>Weather forecast</h1>
 
@@ -50,14 +50,7 @@ export default {
         } catch (error) {
             console.log(error)
         }
-        // Old promise-based approach
-        //this.$http
-        //    .get('/api/SampleData/WeatherForecasts')
-        //    .then(response => {
-        //        console.log(response.data)
-        //        this.forecasts = response.data
-        //    })
-        //    .catch((error) => console.log(error))*/
+
     }
 }
 </script>
