@@ -31,6 +31,13 @@ module.exports = (env) => {
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         },
+        resolveLoader: {
+            alias: {
+                // necessary to to make lang="scss" work in test when using vue-loader's ?inject option
+                // see discussion at https://github.com/vuejs/vue-loader/issues/724
+                'scss-loader': 'sass-loader'
+            }
+        },
         plugins: [
             new webpack.DllReferencePlugin({
                 context: __dirname,
